@@ -1,42 +1,38 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins' sans-serif;
-}
-body{
+  }
+  body {
     line-height: 1.6;
     font-size: 16px;
-
-
-}
-
-h1{
+  }
+  
+  h1 {
     font-size: 36px;
     font-weight: 600;
     text-align: center;
     margin: 40px 0 60px 0;
-
-}
-form{
+  }
+  form {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 60px;
-}
-
-#search-input{
+  }
+  
+  #search-input {
     width: 60%;
     max-width: 400px;
-    padding:10px 20px;
+    padding: 10px 20px;
     border: none;
-    box-shadow: 0 0 6px rgba(0 ,0,  0, 0.2);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
     border-radius: 5px;
-    color:#333;
-
-}
-
-#search-button{
+    color: #333;
+  }
+  
+  #search-button {
     padding: 10px 20px;
     background-color: #26967a;
     color: #fff;
@@ -44,86 +40,146 @@ form{
     border-radius: 5px;
     margin-left: 10px;
     cursor: pointer;
-}
-
-#search-button:hover{
+  }
+  
+  #search-button:hover {
     opacity: 0.8;
-}
-
-.search-results{
+  }
+  
+  .search-results {
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
-
-}
-
-.search-result{
+  }
+  
+  .search-result {
+    position: relative;
     margin-bottom: 60px;
     width: 30%;
-    height: 100%;
     border-radius: 5px;
-    box-shadow: 0 0 6px rgba(0 ,0,  0, 0.2);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
     overflow: hidden;
-}
-
-.search-result img{
-    width:100%;
+  }
+  
+  .search-result img {
+    width: 100%;
     height: 200px;
     object-fit: cover;
-
-}
-
-.search-result:hover img{
+  }
+  
+  .search-result:hover img {
     transform: scale(1.1);
     transition: transform 0.3s ease;
     opacity: 0.8;
-
-}
-
-.search-result a{
+  }
+  
+  .search-result a {
     text-decoration: none;
     color: #333;
     display: block;
-    padding: 10px;
+    margin: 10px;
     text-transform: capitalize;
-
-}
-
-#show-more-button{
+  }
+  
+  #show-more-button {
     padding: 10px 20px;
     background-color: #2d8ca8;
     color: #fff;
     border: none;
     border-radius: 5px;
-    margin:0 auto;
+    margin: 0 auto;
     display: block;
     cursor: pointer;
     margin-bottom: 60px;
     display: none;
-
-}
-
-#show-more-button:hover{
+  }
+  
+  #show-more-button:hover {
     opacity: 0.8;
-}
-
-@media screen and(max-width:768px) {
-   
-    .search-results{
-       padding: 20px;
+  }
+  
+  .fullscreen-button {
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .search-result:hover .fullscreen-button {
+    opacity: 1;
+  }
+  
+  .fullscreen-button:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  
+  .liked {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #000;
+    cursor: pointer;
+    background: none;
+  }
+  
+  .search-result:hover .like-button {
+    opacity: 1;
+  }
+  
+  .like-fullscreen-button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+  }
+  
+  .search-result:hover .like-fullscreen-button-container {
+    opacity: 1;
+  }
+  
+  .button {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .like-button {
+    padding: 5px 7px;
+  }
+  
+  .like-button:hover,
+  .fullscreen-button:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+    border: 1px solid #000;
+  }
+  
+  @media screen and(max-width:768px) {
+    .search-results {
+      padding: 20px;
     }
-    .search-result{
-        width: 45%;
+    .search-result {
+      width: 45%;
     }
-
-    
-}
-
-@media screen and(max-width:480px) {
-    .search-result{
-        width: 100%;
+  }
+  
+  @media screen and(max-width:480px) {
+    .search-result {
+      width: 100%;
     }
-    
-}
+  }
